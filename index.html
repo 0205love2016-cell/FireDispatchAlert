@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FireDispatchAlert 派遣提醒</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+            font-size: 16px;
+            line-height: 1.65;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7f6;
+            color: #374151;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #d32f2f;
+            text-align: center;
+            margin-bottom: 5px;
+            font-size: 1.9rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+        .subtitle a {
+            color: #1e88e5;
+            text-decoration: none;
+        }
+        .subtitle a:hover {
+            text-decoration: underline;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            border-top: 4px solid transparent;
+        }
+        .card-android { border-top-color: #3ddc84; }
+        .card-tg { border-top-color: #24A1DE; }
+        
+        h2 {
+            color: #1f2937;
+            font-size: 1.35rem;
+            font-weight: 700;
+            border-bottom: 2px solid #f3f4f6;
+            padding-bottom: 12px;
+            margin-top: 0;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 14px 0;
+            margin: 12px 0;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.05rem;
+            letter-spacing: 0.5px;
+            text-align: center;
+            box-sizing: border-box;
+            color: white;
+            transition: opacity 0.2s, transform 0.1s;
+        }
+        .btn-half {
+            width: 48%;
+            display: inline-block;
+            margin: 6px 1%;
+            font-size: 0.95rem;
+            padding: 10px 0;
+        }
+        .btn-row { text-align: center; }
+        
+        .btn:hover { opacity: 0.9; }
+        .btn:active { transform: scale(0.98); }
+        .btn-android { background-color: #3ddc84; color: #000; }
+        .btn-ios { background-color: #007aff; }
+        .btn-tg { background-color: #24A1DE; }
+        
+        /* 方案特點標籤 */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+        .feature-list li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        .tag {
+            flex-shrink: 0;
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-right: 8px;
+            margin-top: 2px;
+        }
+        .tag-pro { background: #dcfce7; color: #166534; }
+        .tag-con { background: #fee2e2; color: #991b1b; }
+        .tag-target { background: #e0f2fe; color: #075985; }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        .footer a {
+            color: #1e88e5;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>FireDispatchAlert</h1>
+    <div class="subtitle">
+        訊號來源: <a href="https://cycfb.cyhg.gov.tw/DisasterPrevent.aspx?n=5F10482409025004&sms=ED4E0CDDC2EA92E6" target="_blank">嘉義縣消防局-中文網-嘉消真好</a><br>
+        雲端伺服器偵測網頁即時更新之案件，發出提醒訊號
+    </div>
+
+    <!-- 方案一：Android -->
+    <div class="card card-android">
+        <h2>🤖 方案一：Android 專屬原生版</h2>
+        <p>我們自己開發的 Android 專屬應用程式，完美整合系統底層，穩定接收派遣訊號。</p>
+        
+        <ul class="feature-list">
+            <li><span class="tag tag-pro">✅ 優勢</span> <span>100% 完全免費！安裝簡單，針對 Android 系統優化，推播快速穩定。</span></li>
+            <li><span class="tag tag-con">⚠️ 劣勢</span> <span>僅限 Android 手機安裝使用（iPhone 無法下載）。</span></li>
+            <li><span class="tag tag-target">🎯 適合</span> <span>所有拿 Android 手機的學長與弟兄。</span></li>
+        </ul>
+
+        <a href="https://drive.google.com/file/d/1-RE7kY6ryS5c2AtSOW2sV_hzMu4jCHDI/view?usp=drivesdk" class="btn btn-android" target="_blank">📲 下載 Android 專屬 App</a>
+    </div>
+
+    <!-- 方案二：Telegram -->
+    <div class="card card-tg">
+        <h2>✈️ 方案二：全平台通用版 (Telegram)</h2>
+        <p>免安裝新 App，直接使用大家熟悉的 Telegram 智能機器人。內建強大的「自訂分流」功能，想聽哪個分隊自己訂閱！</p>
+        
+        <ul class="feature-list">
+            <li><span class="tag tag-pro">✅ 優勢</span> <span>100% 完全免費！不分手機廠牌 (iOS/Android/電腦) 皆可使用。可在對話框輸入指令 (如 <code>/sub 雙福 火警</code>) 精準訂閱。</span></li>
+            <li><span class="tag tag-con">⚠️ 劣勢</span> <span>無法突破 iOS 的靜音模式。如果睡覺時手機切靜音，警報只會無聲震動，半夜叫不醒人。</span></li>
+            <li><span class="tag tag-target">🎯 適合</span> <span>想隨時查看全縣動態的人員、白天勤務人員、作為輔助備用的第二接收管道。</span></li>
+        </ul>
+
+        <a href="https://t.me/FireDispatchAlert_bot" class="btn btn-tg" target="_blank">🚀 點擊啟動 Telegram 機器人</a>
+        
+        <div style="margin-top: 15px; text-align: center; font-size: 0.9rem; color: #666;">
+            尚未安裝 Telegram？請先下載：<br>
+            <div class="btn-row">
+                <a href="https://apps.apple.com/tw/app/telegram-messenger/id686449807" class="btn btn-ios btn-half" target="_blank">🍎 iOS 版本</a>
+                <a href="https://play.google.com/store/apps/details?id=org.telegram.messenger&hl=zh_TW" class="btn btn-android btn-half" target="_blank">🤖 Android 版本</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 系統聲明與注意事項 -->
+    <div class="card" style="border-top-color: #9ca3af; background-color: #f9fafb;">
+        <h2 style="font-size: 1.2rem;">📢 系統聲明與注意事項</h2>
+        <p style="font-size: 0.95rem; color: #4b5563; line-height: 1.8; margin-bottom: 0;">
+            ✔️ <strong>純公益免費：</strong>本系統為純公益性質，完全免費提供消防與義消人員使用。<br>
+            ✔️ <strong>公開資訊來源：</strong>案件資訊均來自消防局之官方公開網頁。<br>
+            ⚠️ <strong>系統限制：</strong>若官方來源網頁發生異常、維護或連線中斷，本系統推播亦可能隨之發生<strong>延遲或斷線</strong>。請務必搭配官方無線電等正規設備作為主要接收管道，本系統僅供輔助提醒。
+        </p>
+    </div>
+
+    <!-- 頁尾資訊 -->
+    <div class="footer">
+        開發人員信箱：<a href="mailto:0205love2016@gmail.com">0205love2016@gmail.com</a>
+    </div>
+
+</div>
+
+</body>
+</html>
